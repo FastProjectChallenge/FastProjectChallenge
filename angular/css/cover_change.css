@@ -1,0 +1,64 @@
+/* Custom default button */
+
+.btn-default, .btn-default:hover, .btn-default:focus {
+    color: #333;
+    text-shadow: none;
+    /* Prevent inheritence from `body` */
+    background-color: #cacc00;
+    border: 1px solid #b4b600;
+}
+html, body {
+    height: 100%;
+ text-shadow: 0 1px 3px rgba(0,0,0,.5);
+    background-color: #7b983b;
+    color: #FFF;
+}
+.top {
+    
+    margin-top: 80px;
+    
+    /*margin-bottom: 10px;*/
+}
+.top-heading {text-align:left;} .top-description {text-align:left;}
+
+/*.masthead-brand {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  position:absolute;
+}*/
+.masthead{
+position: absolute;
+
+}
+.list-group-item {
+	background-color: #8aaa42;
+}
+
+.form-control:focus {
+border-color: #b4b600;
+box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(180,182,0, 0.6);
+}
+
+/*body {
+  padding-top: 70px;
+  padding-bottom: 30px;
+}*/
+
+.lol{
+	/*position: absolute;*/
+	margin-top: 1px;
+	margin-left: -30px;
+	font-size: 30px;
+}
+
+.dropdown-menu>.active>a, .dropdown-menu>.active>a:hover, .dropdown-menu>.active>a:focus {
+color: #afa;
+text-decoration: none;
+background-color: #8aaa42;
+outline: 0;
+}
+
+a
+{
+	cursor:auto;
+}
