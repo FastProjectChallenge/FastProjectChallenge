@@ -2,18 +2,13 @@
 import json
 from django.core import urlresolvers
 from django.http import HttpResponse
+from django.shortcuts import render_to_response
 from models import BUnit, UnitRelation, UnitRelationChain, UnitRelationChainItem, Comment
 from converter.api import v1_api
 
-intro_text = ""
 
 def index(request):
-	patterns = _get_named_patterns()
-	r = HttpResponse(intro_text, content_type = 'text/plain')
-	longest = max([len(pair[0]) for pair in patterns])
-	for key, value in patterns:
-		r.write('%s %s\n' % (key.ljust(longest + 1), value))
-	return r
+	return render_to_response('index.html')
 
 def _get_named_patterns():
 	"Returns list of (pattern-name, pattern) tuples"
