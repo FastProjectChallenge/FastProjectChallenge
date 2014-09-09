@@ -1,4 +1,4 @@
-from .models import BUnit, UnitRelation, UnitRelationChain, UnitRelationChainItem, Comment
+from .models import PageId, BUnit, UnitRelation, UnitRelationChain, UnitRelationChainItem
 from tastypie.resources import ModelResource
 from tastypie.api import Api
 from django.contrib.auth.models import User
@@ -23,6 +23,11 @@ class MyModelResource(ModelResource):
         desired_format = self.determine_format(request)
         serialized = self.serialize(request, data, desired_format)
         return response_class(content=serialized, content_type=build_content_type(desired_format), **response_kwargs)
+
+class PageIdResource(MyModelResource):
+    class Meta:
+        queryset = PageId.objects.all()
+        resource_name = 'page'
 
 class UserResource(MyModelResource):
     class Meta:
@@ -50,18 +55,13 @@ class UnitRelationChainItemResource(MyModelResource):
         queryset = UnitRelationChainItem.objects.all()
         resource_name = 'chain_item'
 
-class CommentResource(MyModelResource):
-    class Meta:
-        queryset = Comment.objects.all()
-        resource_name = 'comment'
-
 
 v1_api = Api(api_name='v1')
+v1_api.register(PageIdResource())
 v1_api.register(UserResource())
 v1_api.register(BUnitResource())
 v1_api.register(UnitRelationResource())
 v1_api.register(UnitRelationChainResource())
 v1_api.register(UnitRelationChainItemResource())
-v1_api.register(CommentResource())
 
 

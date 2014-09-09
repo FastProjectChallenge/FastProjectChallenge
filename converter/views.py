@@ -3,7 +3,7 @@ import json
 from django.core import urlresolvers
 from django.http import HttpResponse
 from django.shortcuts import render_to_response
-from models import BUnit, UnitRelation, UnitRelationChain, UnitRelationChainItem, Comment
+from models import PageId, BUnit, UnitRelation, UnitRelationChain, UnitRelationChainItem
 from converter.api import v1_api
 
 

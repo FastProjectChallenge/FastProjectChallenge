@@ -1,8 +1,8 @@
 from django.contrib import admin
-from .models import BUnit, UnitRelation, UnitRelationChain, UnitRelationChainItem, Comment
+from .models import PageId, BUnit, UnitRelation, UnitRelationChain, UnitRelationChainItem
 
+admin.site.register(PageId)
 admin.site.register(BUnit)
 admin.site.register(UnitRelation)
 admin.site.register(UnitRelationChain)
 admin.site.register(UnitRelationChainItem)
-admin.site.register(Comment)
