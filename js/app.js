@@ -6,14 +6,11 @@ anymeterApp.config(['$routeProvider',
         when('/top', {
             templateUrl: 'index.html',
             controller: 'anymeterTopListCtrl'
-        }).
-        when('/top/:phoneId', {
-            templateUrl: 'partials/phone-detail.html',
-            controller: 'PhoneDetailCtrl'
-        }).
+        })
+        /*.
         otherwise({
-            redirectTo: '/top'
-        });
+            redirectTo: '/'
+        });*/
     }
 ]);
 
@@ -28,7 +25,7 @@ anymeterApp.controller('anymeterTopListCtrl', ['$scope', '$http',
         });
 
         $scope.orderProp = 'age';*/
-        $scope.toppers = testTop;
+        this.toppers = testTop;
     }
 ]);
 
