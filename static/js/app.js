@@ -47,9 +47,9 @@
             this.toppers = [];
 
             console.log(this.toppers);
-            $http.get('http://anymeter.herokuapp.com/api/v1/page/schema/?format=json').then(function(response) {
-                //self.toppers = angular.copy(response.data);
-                self.toppers = testTop;
+            $http.get('/api/v1/relation/?format=json').then(function(response) {
+                self.toppers = angular.copy(response.data.objects);
+                //self.toppers = testTop;
                 console.log(self.toppers, self.toppers[0], self.toppers.length);
             });
 
