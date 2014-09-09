@@ -7,6 +7,9 @@ from converter import views
 
 urlpatterns = patterns('',
 	url(r'^$', views.index),
+	
+	url(r'^vk_like/$', views.vk_like),
+
     url(r'^admin/', include(admin.site.urls)),
     url(r'^api/', include(v1_api.urls)),
     url(r'^chain/(?P<src_id>\d+)/(?P<trg_id>\d+)/$', views.chain),
