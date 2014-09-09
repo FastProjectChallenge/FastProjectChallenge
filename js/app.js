@@ -5,12 +5,19 @@ anymeterApp.config(['$routeProvider',
         $routeProvider.
         when('/top', {
             templateUrl: 'index.html',
-            controller: 'anymeterTopListCtrl'
-        })
-        /*.
+            //controller: 'anymeterTopListCtrl'
+        }).
+        when('/singin', {
+            templateUrl: 'singin.html',
+            controller: 'anymeterSinginCtrl'
+        }).
+        when('/singup', {
+            templateUrl: 'singup.html',
+            controller: 'anymeterSingupCtrl'
+        }).
         otherwise({
             redirectTo: '/'
-        });*/
+        });
     }
 ]);
 
@@ -29,12 +36,17 @@ anymeterApp.controller('anymeterTopListCtrl', ['$scope', '$http',
     }
 ]);
 
-anymeterApp.controller('PhoneDetailCtrl', ['$scope', '$routeParams',
+anymeterApp.controller('anymeterSinginCtrl', ['$scope', '$routeParams',
     function($scope, $routeParams) {
-        $scope.phoneId = $routeParams.phoneId;
+
     }
 ]);
 
+anymeterApp.controller('anymeterSingupCtrl', ['$scope', '$routeParams',
+    function($scope, $routeParams) {
+
+    }
+]);
 
 var testTop = [{
     name: 'Name Lol',
