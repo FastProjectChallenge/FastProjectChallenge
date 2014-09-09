@@ -4,6 +4,7 @@ from django.conf import settings
 from django.contrib import admin
 from converter.api import v1_api
 from converter import views
+from django.views.generic.base import RedirectView
 
 urlpatterns = patterns('',
 	url(r'^$', views.index),

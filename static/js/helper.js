@@ -5,6 +5,7 @@ var helper = {
     getData: function(URL) {
         $.getJSON(URL, function(json) {
             console.log(json);
+            return (json);
         });
     },
 
