@@ -1,9 +1,9 @@
 I accepted from: {{ name }}
 
 I challenge:
-1. {{ compyny/team }}
-2. {{ compyny/team }}
-3. {{ compyny/team }}
+1. {{ company/team }}
+2. {{ company/team }}
+3. {{ company/team }}
 
 My project title: {{ title }}
 
